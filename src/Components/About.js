@@ -35,13 +35,13 @@ const About = ({ data }) => {
                 <span>{name}</span>
                 <br />
                 <span>
-                  {street}
-                  <br />
+                  {/* {street} */}
+                  {/* <br /> */}
                   {city} {state}, {zip}
                 </span>
                 <br />
-                <span>{phone}</span>
-                <br />
+                {/* <span>{phone}</span> */}
+                {/* <br /> */}
                 <span>{email}</span>
               </p>
             </div>
