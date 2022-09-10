@@ -34,21 +34,13 @@ const Header = ({ data }) => {
               Home
             </a>
           </li>
-          <li>
-            <a className="smoothscroll" href="#about">
-              About
-            </a>
-          </li>
+
           <li>
             <a className="smoothscroll" href="#resume">
-              Resume
+              Price
             </a>
           </li>
-          <li>
-            <a className="smoothscroll" href="#portfolio">
-              Works
-            </a>
-          </li>
+
           <li>
             <a className="smoothscroll" href="#contact">
               Contact
@@ -60,13 +52,10 @@ const Header = ({ data }) => {
       <div className="row banner">
         <div className="banner-text">
           <h1 className="responsive-headline">
-            <TypeWriter typing={0.5}>{name ? `I'm ${name}.` : null}</TypeWriter>
+            <TypeWriter typing={0.5}>{name ? `${name}` : null}</TypeWriter>
           </h1>
-          <h3>
-            Based in {city}. <span>{occupation}</span>. {description}.
-          </h3>
+          <h3>{occupation}</h3>
           <hr />
-          <ul className="social">{networks}</ul>
         </div>
       </div>
 

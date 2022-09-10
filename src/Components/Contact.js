@@ -7,12 +7,12 @@ const Contact = ({ data }) => {
   const [message, setMessage] = useState("");
 
   if (data) {
-    var contactName = data.name;
+    var contactName = data.contactName;
     var street = data.address.street;
     var city = data.address.city;
     var state = data.address.state;
     var zip = data.address.zip;
-    var phone = data.phone;
+    var phone = data.phoneNo;
     var contactEmail = data.email;
     var contactMessage = data.contactmessage;
   }
@@ -42,96 +42,22 @@ const Contact = ({ data }) => {
       </div>
 
       <div className="row">
-        <div className="eight columns">
-          <form onSubmit={submitForm}>
-            <fieldset>
-              <div>
-                <label htmlFor="contactName">
-                  Name <span className="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  defaultValue=""
-                  value={name}
-                  size="35"
-                  id="contactName"
-                  name="contactName"
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="contactEmail">
-                  Email <span className="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  defaultValue=""
-                  value={email}
-                  size="35"
-                  id="contactEmail"
-                  name="contactEmail"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="contactSubject">Subject</label>
-                <input
-                  type="text"
-                  defaultValue=""
-                  value={subject}
-                  size="35"
-                  id="contactSubject"
-                  name="contactSubject"
-                  onChange={(e) => setSubject(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="contactMessage">
-                  Message <span className="required">*</span>
-                </label>
-                <textarea
-                  cols="50"
-                  rows="15"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  id="contactMessage"
-                  name="contactMessage"
-                ></textarea>
-              </div>
-
-              <div>
-                <button onClick={submitForm} type="submit" className="submit">
-                  Submit
-                </button>
-              </div>
-            </fieldset>
-          </form>
-
-          <div id="message-warning"> Error boy</div>
-          <div id="message-success">
-            <i className="fa fa-check"></i>Your message was sent, thank you!
-            <br />
-          </div>
-        </div>
-
         <aside className="four columns footer-widgets">
           <div className="widget widget_contact">
-            <h4>Address and Phone</h4>
+            <h4>Contact Us</h4>
             <p className="address">
               {contactName}
               <br />
-              {contactEmail}
+              {phone}
               <br />
               {/* <br /> */}
               {/* {street} <br /> */}
-              {city}, {state} {zip}
+              {city}, {state}
               {/* <br /> */}
               {/* <span>{phone}</span> */}
             </p>
           </div>
+      
         </aside>
       </div>
     </section>
