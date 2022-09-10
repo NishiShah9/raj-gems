@@ -7,7 +7,7 @@ const Contact = ({ data }) => {
   const [message, setMessage] = useState("");
 
   if (data) {
-    var contactName = data.contactName;
+   var contactName = data.contactName;
     var street = data.address.street;
     var city = data.address.city;
     var state = data.address.state;
@@ -37,7 +37,7 @@ const Contact = ({ data }) => {
         </div>
 
         <div className="ten columns">
-          <p className="lead">{contactMessage}</p>
+          {/* <p className="lead">{contactMessage}</p> */}
         </div>
       </div>
 
@@ -48,16 +48,16 @@ const Contact = ({ data }) => {
             <p className="address">
               {contactName}
               <br />
+              {contactEmail}
+              <br />
               {phone}
               <br />
               {/* <br /> */}
-              {/* {street} <br /> */}
               {city}, {state}
               {/* <br /> */}
               {/* <span>{phone}</span> */}
             </p>
           </div>
-      
         </aside>
       </div>
     </section>

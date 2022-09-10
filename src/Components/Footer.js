@@ -18,7 +18,7 @@ const Footer = ({ data }) => {
       <div className="row">
         <div className="twelve columns">
           <ul className="copyright">
-            <li>@copyright 2021</li>
+            <li>@copyright 2022</li>
           </ul>
         </div>
         <div id="go-top">
